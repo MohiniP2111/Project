@@ -1,0 +1,17 @@
+D:\DEVANSH\Devansh_env\Scripts\python.exe D:/DEVANSH/emotion_rec/KNN_SVM_TRAIN.py
+train_X.shape : (53712, 2500)
+test_X.shape : (13428, 2500)
+train_Y.shape : (53712,)
+test_Y.shape : (13428,)
+\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function plot_confusion_matrix is deprecated; Function `plot_confusion_matrix` is deprecated in 1.0 and will be removed in 1.2. Use one of the class methods: ConfusionMatrixDisplay.from_predictions or ConfusionMatrixDisplay.from_estimator.
+  warnings.warn(msg, category=FutureWarning)
+\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function plot_confusion_matrix is deprecated; Function `plot_confusion_matrix` is deprecated in 1.0 and will be removed in 1.2. Use one of the class methods: ConfusionMatrixDisplay.from_predictions or ConfusionMatrixDisplay.from_estimator.
+  warnings.warn(msg, category=FutureWarning)
+[2. 4. 3. ... 5. 0. 3.]
+Support Vector Classification Accuracy 99.84361036639856
+SVC Found 13407 correct labels
+[2. 4. 3. ... 5. 0. 3.]
+KNN ACCURACY 97.78820375335121
+KNN Found 13131 correct labels
+
+Process finished with exit code 0

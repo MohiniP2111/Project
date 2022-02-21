@@ -1,0 +1,18 @@
+KNN cross-val Accuracy: 0.963 (0.004)
+              precision    recall  f1-score   support
+
+       anger       0.99      0.98      0.98      3392
+     disgust       0.99      0.98      0.98      5790
+        fear       0.97      0.94      0.95      3784
+       happy       0.98      0.97      0.98      3116
+     neutral       0.99      1.00      0.99      4923
+     suprise       0.97      0.97      0.97      2729
+         sad       0.93      0.98      0.95      3122
+
+    accuracy                           0.98     26856
+   macro avg       0.97      0.97      0.97     26856
+weighted avg       0.98      0.98      0.98     26856
+
+KNN ACCURACY 97.5126601131963
+KNN Found 26188 correct labels
+

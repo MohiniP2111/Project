@@ -1,0 +1,106 @@
+D:\FER_DESERTATION\Python_env_tf_sklearn\Scripts\python.exe D:/FER_DESERTATION/emotion_rec/train.py
+CUDA
+64_112
+CUDNN
+64_8
+Found 67140 files belonging to 7 classes.
+Using 40284 files for training.
+2021-12-03 19:49:11.383911: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-12-03 19:49:11.901636: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6008 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2060 SUPER, pci bus id: 0000:01:00.0, compute capability: 7.5
+Found 67140 files belonging to 7 classes.
+Using 13428 files for validation.
+Found 67140 files belonging to 7 classes.
+Using 13428 files for validation.
+['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'suprise']
+(32, 180, 180, 3)
+(32,)
+tf.Tensor([4 0 0 3 1 6 4 1 4 1 1 3 6 5 1 1 2 2 6 0 1 6 2 1 6 2 3 0 1 6 4 1], shape=(32,), dtype=int32)
+2021-12-03 19:49:26.693363: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 232 of 1000
+2021-12-03 19:49:36.677484: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 456 of 1000
+2021-12-03 19:49:46.666664: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 679 of 1000
+2021-12-03 19:49:56.695458: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 859 of 1000
+2021-12-03 19:50:06.717934: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 986 of 1000
+2021-12-03 19:50:07.735472: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:405] Shuffle buffer filled.
+2021-12-03 19:50:08.504626: W tensorflow/core/kernels/data/cache_dataset_ops.cc:768] The calling iterator did not fully read the dataset being cached. In order to avoid unexpected truncation of the dataset, the partially cached contents of the dataset  will be discarded. This can happen if you have an input pipeline similar to `dataset.cache().take(k).repeat()`. You should use `dataset.take(k).cache().repeat()` instead.
+0.0 0.8544439
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ rescaling_1 (Rescaling)     (None, 180, 180, 3)       0         
+                                                                 
+ conv2d (Conv2D)             (None, 180, 180, 2)       56        
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 90, 90, 2)        0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 90, 90, 2)         38        
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 45, 45, 2)        0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 4050)              0         
+                                                                 
+ dense (Dense)               (None, 6)                 24306     
+                                                                 
+ dense_1 (Dense)             (None, 7)                 49        
+                                                                 
+=================================================================
+Total params: 24,449
+Trainable params: 24,449
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/15
+2021-12-03 19:50:21.516076: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 222 of 1000
+2021-12-03 19:50:31.525878: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 455 of 1000
+2021-12-03 19:50:41.537669: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 681 of 1000
+2021-12-03 19:50:51.509484: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:380] Filling up shuffle buffer (this may take a while): 895 of 1000
+2021-12-03 19:50:58.039993: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:405] Shuffle buffer filled.
+2021-12-03 19:51:00.255481: I tensorflow/stream_executor/cuda/cuda_dnn.cc:366] Loaded cuDNN version 8100
+1259/1259 [==============================] - 260s 163ms/step - loss: 0.6868 - accuracy: 0.7399 - val_loss: 0.2539 - val_accuracy: 0.9105
+Epoch 2/15
+1259/1259 [==============================] - 266s 212ms/step - loss: 0.1796 - accuracy: 0.9389 - val_loss: 0.1314 - val_accuracy: 0.9569
+Epoch 3/15
+1259/1259 [==============================] - 251s 199ms/step - loss: 0.1059 - accuracy: 0.9653 - val_loss: 0.1296 - val_accuracy: 0.9567
+Epoch 4/15
+1259/1259 [==============================] - 246s 196ms/step - loss: 0.0751 - accuracy: 0.9757 - val_loss: 0.1254 - val_accuracy: 0.9606
+Epoch 5/15
+1259/1259 [==============================] - 236s 188ms/step - loss: 0.0614 - accuracy: 0.9798 - val_loss: 0.1184 - val_accuracy: 0.9627
+Epoch 6/15
+1259/1259 [==============================] - 209s 166ms/step - loss: 0.0509 - accuracy: 0.9832 - val_loss: 0.0924 - val_accuracy: 0.9707
+Epoch 7/15
+1259/1259 [==============================] - 192s 152ms/step - loss: 0.0417 - accuracy: 0.9858 - val_loss: 0.0785 - val_accuracy: 0.9766
+Epoch 8/15
+1259/1259 [==============================] - 182s 144ms/step - loss: 0.0376 - accuracy: 0.9873 - val_loss: 0.0697 - val_accuracy: 0.9789
+Epoch 9/15
+1259/1259 [==============================] - 177s 141ms/step - loss: 0.0373 - accuracy: 0.9880 - val_loss: 0.0697 - val_accuracy: 0.9781
+Epoch 10/15
+1259/1259 [==============================] - 160s 127ms/step - loss: 0.0249 - accuracy: 0.9924 - val_loss: 0.0599 - val_accuracy: 0.9838
+Epoch 11/15
+1259/1259 [==============================] - 177s 141ms/step - loss: 0.0273 - accuracy: 0.9908 - val_loss: 0.0537 - val_accuracy: 0.9859
+Epoch 12/15
+1259/1259 [==============================] - 155s 123ms/step - loss: 0.0257 - accuracy: 0.9918 - val_loss: 0.0564 - val_accuracy: 0.9857
+Epoch 13/15
+1259/1259 [==============================] - 162s 128ms/step - loss: 0.0234 - accuracy: 0.9926 - val_loss: 0.0707 - val_accuracy: 0.9803
+Epoch 14/15
+1259/1259 [==============================] - 139s 110ms/step - loss: 0.0207 - accuracy: 0.9933 - val_loss: 0.0453 - val_accuracy: 0.9885
+Epoch 15/15
+1259/1259 [==============================] - 150s 119ms/step - loss: 0.0201 - accuracy: 0.9932 - val_loss: 0.0453 - val_accuracy: 0.9878
+              precision    recall  f1-score   support
+
+       anger       1.00      0.98      0.99      1693
+     disgust       0.99      1.00      0.99      2733
+        fear       0.99      0.99      0.99      1972
+       happy       0.99      0.99      0.99      1598
+     neutral       1.00      1.00      1.00      2518
+     suprise       1.00      0.99      1.00      1548
+         sad       0.99      0.99      0.99      1366
+
+    accuracy                           0.99     13428
+   macro avg       0.99      0.99      0.99     13428
+weighted avg       0.99      0.99      0.99     13428
+
+
+Process finished with exit code 0
