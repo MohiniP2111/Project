@@ -1,1 +1,1 @@
-# Project
+# Face emotion recogibition from video
